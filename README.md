@@ -41,7 +41,12 @@ For UCF-Crime, replace `configs/xd.json` and `runs/xd` with `configs/ucf.json` a
 
 ## Testing
 
-Use the trained Stage-II checkpoint and its corresponding reference gallery.
+Download the pre-trained weights (seed 234) and extract the ZIP files into the repository root. Stage-II packages include the corresponding reference gallery and description embeddings. Stage-I weights are optional for testing.
+
+| Dataset | Stage I | Stage II |
+| --- | --- | --- |
+| XD-Violence | [Download](weights/ARC-VAD_XD_Stage1.zip?raw=true) | [Download](weights/ARC-VAD_XD_Stage2.zip?raw=true) |
+| UCF-Crime | [Download](weights/ARC-VAD_UCF_Stage1.zip?raw=true) | [Download](weights/ARC-VAD_UCF_Stage2.zip?raw=true) |
 
 XD-Violence:
 
