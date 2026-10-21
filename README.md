@@ -57,4 +57,4 @@ python src/main.py evaluate --config configs/ucf.json --stage 2 --checkpoint run
 
 ## Acknowledgments
 
-We thank [VadCLIP](https://github.com/nwpu-zxr/VadCLIP), [CLIP](https://github.com/openai/CLIP), and [DSANet](https://github.com/lessiYin/DSANet) for their open-source implementations. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and licenses.
+We thank the authors of [VadCLIP](https://github.com/nwpu-zxr/VadCLIP) for their valuable work and open-source code.
