@@ -60,6 +60,12 @@ UCF-Crime:
 python src/main.py evaluate --config configs/ucf.json --stage 2 --checkpoint runs/ucf/stage2/best.pt --references runs/ucf/references.pt
 ```
 
+## Results
+
+| Method | UCF-Crime (AVG mAP/%) | XD-Violence (AVG mAP/%) |
+| --- | --- | --- |
+| ARC-VAD (Ours) | 13.37 | 30.75 |
+
 ## Acknowledgments
 
 We thank the authors of [VadCLIP](https://github.com/nwpu-zxr/VadCLIP) for their valuable work and open-source code.
