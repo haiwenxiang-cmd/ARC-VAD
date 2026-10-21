@@ -1,0 +1,11 @@
+torch==2.3.0
+torchvision==0.18.0
+numpy<2
+scipy
+scikit-learn
+pandas
+ftfy
+regex
+tqdm
+Pillow
+packaging

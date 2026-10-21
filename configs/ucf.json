@@ -1,0 +1,91 @@
+{
+  "dataset": "ucf",
+  "seed": 234,
+  "classes": [
+    "Normal",
+    "Abuse",
+    "Arrest",
+    "Arson",
+    "Assault",
+    "Burglary",
+    "Explosion",
+    "Fighting",
+    "RoadAccidents",
+    "Robbery",
+    "Shooting",
+    "Shoplifting",
+    "Stealing",
+    "Vandalism"
+  ],
+  "prompts": [
+    "normal",
+    "abuse",
+    "arrest",
+    "arson",
+    "assault",
+    "burglary",
+    "explosion",
+    "fighting",
+    "roadAccidents",
+    "robbery",
+    "shooting",
+    "shoplifting",
+    "stealing",
+    "vandalism"
+  ],
+  "descriptions": [
+    "normal daily activities",
+    "a person abusing and beating a defenseless person",
+    "police officers arresting a suspect",
+    "a person deliberately setting fire to property",
+    "a person attacking or striking another person",
+    "a person breaking into a building to steal",
+    "an explosion with a sudden blast and smoke",
+    "people fighting and punching each other",
+    "vehicles colliding in a road traffic accident",
+    "a person threatening someone and taking their belongings",
+    "a person firing a gun at others",
+    "a person stealing goods from a shop",
+    "a person taking someone else's property without permission",
+    "a person intentionally damaging or destroying property"
+  ],
+  "model": {
+    "layers": 2,
+    "window": 8,
+    "alpha": 0.2,
+    "agrc": true,
+    "vlsr": true,
+    "beta": 1.0,
+    "groups": 12,
+    "group_width": 32,
+    "gate_temperature": 1.0
+  },
+  "training": {
+    "stage1_epochs": 10,
+    "stage2_epochs": 5,
+    "batch_size": 64,
+    "lr": 2e-05,
+    "stage2_lr_scale": 0.4,
+    "milestones": [
+      4,
+      8
+    ],
+    "lr_decay": 0.1,
+    "weight_decay": 0.01,
+    "text_loss_weight": 0.1,
+    "selection": "AUC_C",
+    "rollback_to_best": true
+  },
+  "readout": {
+    "temperature": 2.0,
+    "hierarchical_weight": 0.5
+  },
+  "data": {
+    "feature_root": "data/features/ucf",
+    "train_list": "data/ucf_train.csv",
+    "test_list": "data/ucf_test.csv",
+    "gt": "data/gt_ucf.npy",
+    "gt_segments": "data/gt_segment_ucf.npy",
+    "gt_labels": "data/gt_label_ucf.npy"
+  }
+}

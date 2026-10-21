@@ -1,0 +1,71 @@
+{
+  "dataset": "xd",
+  "seed": 234,
+  "classes": [
+    "A",
+    "B1",
+    "B2",
+    "B4",
+    "B5",
+    "B6",
+    "G"
+  ],
+  "prompts": [
+    "normal",
+    "fighting",
+    "shooting",
+    "riot",
+    "abuse",
+    "car accident",
+    "explosion"
+  ],
+  "descriptions": [
+    "normal daily activities",
+    "people fighting and punching each other",
+    "a person firing a gun at others",
+    "a crowd of people participating in a violent riot",
+    "a person abusing and beating a defenseless person",
+    "vehicles colliding in a road traffic accident",
+    "an explosion with a sudden blast and smoke"
+  ],
+  "model": {
+    "layers": 1,
+    "window": 64,
+    "alpha": 0.15,
+    "agrc": true,
+    "vlsr": true,
+    "beta": 1.0,
+    "groups": 12,
+    "group_width": 32,
+    "gate_temperature": 1.0
+  },
+  "training": {
+    "stage1_epochs": 10,
+    "stage2_epochs": 5,
+    "batch_size": 96,
+    "lr": 1e-05,
+    "stage2_lr_scale": 1.0,
+    "milestones": [
+      3,
+      6,
+      10
+    ],
+    "lr_decay": 0.1,
+    "weight_decay": 0.01,
+    "text_loss_weight": 0.0001,
+    "selection": "AP_A",
+    "rollback_to_best": true
+  },
+  "readout": {
+    "temperature": 2.0,
+    "hierarchical_weight": 0.1
+  },
+  "data": {
+    "feature_root": "data/features/xd",
+    "train_list": "data/xd_train.csv",
+    "test_list": "data/xd_test.csv",
+    "gt": "data/gt.npy",
+    "gt_segments": "data/gt_segment.npy",
+    "gt_labels": "data/gt_label.npy"
+  }
+}
